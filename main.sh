@@ -29,12 +29,10 @@ ssh -i aws-ec2 ubuntu@$worker1_node_ip << EOF
     sudo su
     chmod +x setup-worker.sh
     ./setup-worker.sh
-EOF
-echo "Ended script for worker 1"
-ssh -i aws-ec2 -o StrictHostKeyChecking=no ubuntu@$worker1_node_ip << EOF
     sudo su
     $join_command --ignore-preflight-errors IsPrivilegedUser
 EOF
+echo "Ended setup for worker 1"
 
 # Setup worker node 2
 worker2_node_ip=`terraform output worker2_instance_public_ip | tr -d '"'`
@@ -45,9 +43,7 @@ ssh -i aws-ec2 ubuntu@$worker2_node_ip << EOF
     sudo su
     chmod +x setup-worker.sh
     ./setup-worker.sh
-EOF
-ssh -i aws-ec2 -o StrictHostKeyChecking=no ubuntu@$worker2_node_ip "$join_command"
-ssh -i aws-ec2 -o StrictHostKeyChecking=no ubuntu@$worker2_node_ip << EOF
     sudo su
     $join_command --ignore-preflight-errors IsPrivilegedUser
 EOF
+echo "Ended setup for worker 2"
