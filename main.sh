@@ -1,3 +1,6 @@
+# Create a ssh public and private key
+ssh-keygen -t rsa -b 2048 -f aws-ec21 -N ''
+
 # Setup infrastructure
 terraform apply -auto-approve
 

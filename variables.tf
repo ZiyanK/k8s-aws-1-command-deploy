@@ -30,6 +30,6 @@ variable "key_name" {
 
 variable "VPC_IPv4_CIDR" {
   description = "Value of the IPv4 adress of the default VPC"
-  type = string
-  default = "172.31.0.0/16"
+  type        = string
+  default     = "172.31.0.0/16"
 }
