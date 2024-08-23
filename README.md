@@ -17,3 +17,5 @@ cd k8s-aws-1-command-deploy
 
 ## Read more about this
 To know more about this repository, you can read my medium article linked below
+
+https://medium.com/@ziyankarmali786/setup-a-kubernetes-cluster-on-aws-ec2-with-just-1-command-43ed1a66a8b8
