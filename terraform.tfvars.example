@@ -1,0 +1,6 @@
+control_plane_instance_name = "Control-Plane"
+worker1_instance_name       = "Worker-1"
+worker2_instance_name       = "Worker-2"
+ec2_ubuntu_ami              = "ami-0522ab6e1ddcc7055"
+key_name                    = "aws-ec2.pub"
+ec2_instance_type           = "t2.medium"
